@@ -1,0 +1,7 @@
+services:
+  ngrok:
+    image: ngrok/ngrok:latest
+    command: http localhost:3000
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+    network_mode: "host"
